@@ -9,4 +9,7 @@ def test01():
     print(locals()) #打印输出局部变量
     print(globals())#打印输出全局变量
 
-test01()
+if __name__ == '__main__':
+    test01()
+
+
