@@ -5,8 +5,11 @@ def test01():
     print("@" * 10)
 
 
-test01()
-test01()
-print(id(test01))
-print(type(test01))
-print(test01)
+
+if __name__ == '__main__':
+    test01()
+    print("id: " +id(test01))
+    print("type: " + type(test01))
+    print(test01)
+
+
