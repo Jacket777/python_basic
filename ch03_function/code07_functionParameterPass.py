@@ -1,7 +1,7 @@
-#测试参数传递
+# 测试函数参数传递分类--可变与不可变
 
-#传递可变对象
-a = [10,20]
+# 传递可变对象
+a = [10, 20]
 print(id(a))
 print(a)
 print("*******")
@@ -12,17 +12,22 @@ def test01(m):
     m.append(300)
     print(id(m))
 
-test01(a)
-print(a)
 
-print("***************")
-#传递不可变对象的引用
-a = 100
+# 传递不可变对象的引用
+b = 100
+
+
 def f1(n):
-    print("n:",id(n))
-    n = n +200
+    print("n:", id(n))
+    n = n + 200
     print("n:", id(n))
     print(n)
 
-f1(a)
-print("a",id(a))
+
+if __name__ == '__main__':
+    print("传递可变对象")
+    test01(a)
+    print(a)
+    print("传递不可变对象")
+    f1(b)
+    print("b", id(b))
