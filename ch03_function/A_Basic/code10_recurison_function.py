@@ -1,4 +1,6 @@
-#测试递归函数的基本原理
+"""
+递归函数的基本原理
+"""
 def test01(n):
     print("test01",n)
     if(n==0):
@@ -10,4 +12,8 @@ def test01(n):
 def test02():
     print("test02")
 
-test01(4)
+
+if __name__ == '__main__':
+    test01(4)
+
+
