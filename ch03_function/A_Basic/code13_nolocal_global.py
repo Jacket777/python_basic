@@ -1,4 +1,6 @@
-#测试nonlocal,global关键字
+"""
+nonlocal,global关键字
+"""
 a=100
 def outer():
     b=10
