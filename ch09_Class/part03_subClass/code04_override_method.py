@@ -1,5 +1,5 @@
 """
-测试继承类的基本使用
+测试方法的重写
 """
 
 
@@ -9,9 +9,10 @@ class Person:
         self.__age = age
 
     def say_age(self):
-        print("no age")
+        print("my age", self.__age)
 
-    pass
+    def say_introduce(self):
+        print("my name is {0}".format(self.name))
 
 
 class Student(Person):
@@ -19,15 +20,12 @@ class Student(Person):
         Person.__init__(self, name, age)  # 必须显示的调用父类的方法，不然解释器不会去调用
         self.score = score
 
-    pass
+    def say_introduce(self):
+        '''重写父类的方法'''
+        print("I am student ,my name is {0}".format(self.name))
 
 
 if __name__ == '__main__':
     s = Student("Jack", 18, 60)
     s.say_age()
-    print(s.name)
-    print(dir(s))
-    print(s._Person__age)
-    # Student-->Person-->Object
-    # print(Student.mro()) #查看继承
-    # print(s.age)
+    s.say_introduce()
